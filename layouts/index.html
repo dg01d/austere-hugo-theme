@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+<header>
+</header>
+<ul class='entries'>
+     {{/*List all pages */}}
+         {{range .Paginator.Pages }}
+         {{ partial "list-entry" . }}
+         {{ end }}
+</ul>
+     
+
+     {{/* Display paginator */}}
+     {{ template "_internal/pagination.html" . }}
+
+{{ end }}

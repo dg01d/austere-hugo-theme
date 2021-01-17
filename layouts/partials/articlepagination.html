@@ -1,0 +1,31 @@
+
+	<div class="paginate">
+		<div class="pagprev">
+				{{ if .Next }}
+			
+					<a rel="next" href="{{.Next.Permalink}}">&#8592;	
+					{{ if not .Next.Title }}
+						Next Post
+					{{ else }}
+						{{- .Next.Title }}
+					{{ end }}
+					</a>
+			{{ end }}
+		</div>
+		<div class="pagnext">
+			{{ if .Prev }}
+					
+					<a rel="prev" href="{{.Prev.Permalink}}">
+					{{ if not .Prev.Title }}
+						Prev Post
+					{{ else }}
+						{{- .Prev.Title }}
+					{{ end }}
+                    &#8594;
+					</a>
+				
+			{{ end }}
+	
+
+		</div>
+	</div>

@@ -1,0 +1,8 @@
+      <li class="post-preview">
+        <a href="{{ .Permalink }}">
+            <h2 class="title">
+                <span>{{- .Title | markdownify -}}</span>
+            </h2>
+            <time>{{ partial "post_meta.html" . }}</time>
+        </a>
+      </li>

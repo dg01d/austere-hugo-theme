@@ -1,0 +1,13 @@
+name = "Austere Hugo Theme"
+license = "MIT"
+licenselink = "https://github.com/Xzya/simple-hugo-theme/blob/master/LICENSE.md"
+description = "An austere theme, using some of the principles of brutalist
+design, but attempting to soften the edges." 
+homepage = "https://github.com/dg01d/austere-hugo-theme"
+tags = ["blog", "minimal", "clean", "light"]
+features = ["small page size", "fast", "tags", "pagination"]
+min_version = "0.41"
+
+[author]
+  name = "Daniel Goldsmith"
+  homepage = "https://dgold.eu/"

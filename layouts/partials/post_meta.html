@@ -1,0 +1,8 @@
+{{ $dateFormat := default "Jan 2, 2006" (index .Site.Params "datefmt") }}
+
+<div class="post-meta">
+    {{/* Display the date if set */}}
+    {{- if not .Date.IsZero -}}
+    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format $dateFormat }}</time>
+    {{- end -}}
+</div>

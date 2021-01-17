@@ -1,0 +1,13 @@
+    {{/* Display taxonomies */}}
+    {{- range $taxo, $taxonomy := .Site.Taxonomies }}
+    {{- $elems := $.Param $taxo }}
+    {{- if $elems }}
+    {{ $taxo | humanize }} &#x5b;
+    {{- range $name := $elems }}
+    {{- with $.Site.GetPage (lower (printf "/%s/%s" $taxo (urlize $name))) }}
+    <a href="{{ .Permalink }}">{{ $name }}</a>
+    {{- end }}
+    {{- end }}
+    &#x5d;
+    {{- end }}
+    {{- end }}

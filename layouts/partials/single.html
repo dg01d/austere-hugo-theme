@@ -1,0 +1,11 @@
+<header>
+    <h1>
+        {{- .Title | markdownify -}}
+    </h1>
+    {{ partial "post_meta.html" . }}
+</header>
+<article class="entry">
+    {{ .Content }}
+</article>
+
+{{- partial "articlepagination.html" .}}
